@@ -1,11 +1,6 @@
 backend:
   name: git-gateway
-    accept_roles: #optional - accepts all users if left out
-    - admin
-    - editor
-    name: github
-    repo: aslamsk/aiqrate-pagination-netlify # Path to your GitHub repository
-  # repo: aslamsk/aiqrate-pagination-netlify
+  repo: aslamsk/aiqrate-pagination-netlify
   branch: master # Branch to update (optional; defaults to master)
 
 publish_mode: editorial_workflow
