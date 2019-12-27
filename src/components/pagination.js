@@ -1,7 +1,7 @@
 import React from "react"
 
 import * as S from "../components/styles.css"
-
+import Link from 'gatsby'
 const Pagination = ({ numPages, currentPage, contextPage }) => {
   if (numPages <= 1) {
     return null
@@ -20,7 +20,8 @@ const Pagination = ({ numPages, currentPage, contextPage }) => {
             {currentPage === index ? (
               <span>{index}</span>
             ) : (
-              <a href={link}>{index}</a>
+              // <a href={link}>{index}</a>
+            <Link to="/link">{index}</Link>
             )}
           </S.PaginationItem>
         )
