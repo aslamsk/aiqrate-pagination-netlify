@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Row, Cell } from "griding"
+import { Row, Cell, Col } from "griding"
 
 import { Container } from "../components/grid"
 import Layout from "../components/layout"
@@ -19,7 +19,11 @@ const BlogPostList = ({ data, pageContext }) => {
       <Cell xs={12}>{currentPage === 1 && <Featured />}</Cell>
 
       <Container>
-        <Row>{allMarkdownRemark.edges.map(renderList)}</Row>
+        <Row >
+          <Cell className="border">
+          {allMarkdownRemark.edges.map(renderList)}
+          </Cell>
+          </Row>
 
         <Pagination currentPage={currentPage} numPages={numPages} />
       </Container>

@@ -15,7 +15,11 @@
 // export default IndexPage
 // const IndexPage = () => <Redirect noThrow from="" to="/blog" />
 import React from "react"
-import './main.css'
+import '../pages/main.css'
+import '../components/layout.css'
+import '../components/footer.css'
+import '../components/header.css'
+// import './main.css'
 import Layout from "../components/layout"
 import {
   Container,
@@ -53,6 +57,7 @@ import aiism from '../images/aiism-logo-1.png'
 import Forbs1 from '../images/forbs-1.jpg'
 import Forbs2 from '../images/forbs-2.jpg'
 import Forbs3 from '../images/forbs-3.jpg'
+// import {Link} from 'gatsby'
 // import Image from '../components/Images'
 // import Formcomponent from '../components/Formcomponent'
 
@@ -65,6 +70,7 @@ class IndexPage extends React.Component {
         {/* <img style={{ margin: 0 }} src={Landing} alt="Landing-pic" style={{height:'90vh', width:'100%'}} /> */}
 
         {/* <Image /> */}
+        <div className="body-container">
         <Carousel>
   <Carousel.Item>
   <img className="landing-carousel-img" src={Landing} alt="no image"/>
@@ -605,7 +611,7 @@ class IndexPage extends React.Component {
         </p>
         <p>Now go build something great!</p> */}
         
-       
+        </div>
       </Layout>
     )
   }

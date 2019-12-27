@@ -47,10 +47,10 @@ p {
   margin: 40px auto;
   width: fit-content;
   line-height: 4rem;
-  border-bottom: 3px solid rgb(224, 164, 88);
+  border-bottom: 3px solid rgb(224, 164, 88) !important;
 }
 .bottom-border{
-    border-bottom: 3px solid rgb(224, 164, 88);
+    border-bottom: 3px solid rgb(224, 164, 88) !important;
 }
 svg {
   overflow: hidden;

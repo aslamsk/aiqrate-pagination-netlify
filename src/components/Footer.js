@@ -43,7 +43,7 @@ export default class Footer extends Component {
                       <small>
                         <li>
                           
-                          <Link to="">
+                          <Link to="" className="aiqration-nav-link">
                             <MdMail /> consult@aiqrate.ai
                           </Link>
                         </li>
@@ -66,10 +66,10 @@ export default class Footer extends Component {
                 <ul className="footer-quick_links">
                   <small>
                     <li className="quick-links">
-                        <Link to="">AIQRATE Engagement Model  </Link>
-                        <Link to="">AIQRATIONS  </Link>
-                        <Link to="">AIQRATE Team   </Link>
-                        <Link to="">Contact Us </Link>
+                        <Link className="aiqration-nav-link" to="">AIQRATE Engagement Model  </Link>
+                        <Link className="aiqration-nav-link" to="">AIQRATIONS  </Link>
+                        <Link className="aiqration-nav-link" to="">AIQRATE Team   </Link>
+                        <Link className="aiqration-nav-link" to="">Contact Us </Link>
                     </li>
                     </small>
                 </ul>

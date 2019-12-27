@@ -487,7 +487,7 @@ const Header = ({ data }) => (
           {/* ------------------------------------- */}
 
           <li style={{ fontSize: "14px", marginTop: "9px" }}>
-            <Link to="/blog" style={{ color: "white" }}>
+            <Link to="/blog" className="aiqration-nav-link" style={{ color: "white" }}>
               AIQRATIONS
             </Link>
           </li>

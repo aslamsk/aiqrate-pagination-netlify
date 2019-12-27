@@ -8,7 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
-import '../components/layout.css'
+import './layout.css'
 import '../components/header.css'
 import '../components/footer.css'
 import '../components/styles.css'
@@ -40,7 +40,7 @@ const Layout = ({ children }) => (
         <>
         <Header />
           {/* <main>{children}</main> */}
-          <Container>{children}</Container>
+          <main>{children}</main>
         <Footer />
           {/* <S.Footer>
             See the original article:{" "}

@@ -11,14 +11,27 @@
   height: 70px;
 }
 .navbar-light .navbar-nav .nav-link {
-  color: white;
-  font-size: 0.8rem;
+  color: white !important;
+  font-size: 0.8rem !important;
 }
 a {
   /* color: black; */
-  color: black;
+  color: black !important;
   box-shadow: none;
   /* text-align: center; */
+}
+
+a:hover {
+  /* color: black; */
+  color:blue !important;
+  box-shadow: none;
+  /* text-align: center; */
+}
+.nav-link > a:hover{
+  color: blue !important;
+}
+.aiqration-nav-link{
+  color:white !important;
 }
 .navbar-expand-lg .navbar-nav .dropdown-menu {
   text-align: center;
@@ -262,6 +275,12 @@ h2 {
     color: white;
     font-size: 12px !important;
   }
+  a {
+    /* color: black; */
+    color: white !important;
+    box-shadow: none;
+    /* text-align: center; */
+}
   .title-text {
     font-weight: unset !important;
     font-size: 1.1rem !important;
