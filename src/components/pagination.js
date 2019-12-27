@@ -20,8 +20,8 @@ const Pagination = ({ numPages, currentPage, contextPage }) => {
             {currentPage === index ? (
               <span>{index}</span>
             ) : (
-              // <a href={link}>{index}</a>
-            <Link to="/link">{index}</Link>
+              <a href={link}>{index}</a>
+            // <Link to="/link">{index}</Link>
             )}
           </S.PaginationItem>
         )
