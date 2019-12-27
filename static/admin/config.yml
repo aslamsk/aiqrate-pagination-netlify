@@ -30,7 +30,7 @@ public_folder: "/images/uploads"
 collections:
   - name: blog
     label: Blog
-    folder: content/blog
+    folder: content/post
     create: true
     fields:
       - { name: "featuredImage", label: "Featured Image", widget: "image" }
