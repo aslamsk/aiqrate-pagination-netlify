@@ -24,8 +24,8 @@ backend:
   name: github
   repo: aslamsk/aiqrate-pagination-netlify
 
-media_folder: content/blog
-public_folder: new
+media_folder: static/assets
+public_folder: assets
 
 collections:
   - name: blog
