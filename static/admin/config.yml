@@ -25,12 +25,12 @@ backend:
   repo: aslamsk/aiqrate-pagination-netlify
 
 media_folder: content/blog
-public_folder: "/images/uploads"
+public_folder: new
 
 collections:
   - name: blog
     label: Blog
-    folder: content/post
+    folder: content/blog
     create: true
     fields:
       - { name: "featuredImage", label: "Featured Image", widget: "image" }
