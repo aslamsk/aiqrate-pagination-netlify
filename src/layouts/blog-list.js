@@ -20,9 +20,9 @@ const BlogPostList = ({ data, pageContext }) => {
 
       <Container>
         <Row >
-          <Cell className="border">
+         
           {allMarkdownRemark.edges.map(renderList)}
-          </Cell>
+          
           </Row>
 
         <Pagination currentPage={currentPage} numPages={numPages} />

@@ -24,7 +24,7 @@ const BlogFeatured = () => {
       <Cell md={6}>
         <Row>
           <S.FeaturedInfos>
-            <S.Author>
+            {/* <S.Author>
               By{" "}
               <Link
                 to={`/blog/author/${kebabCase(
@@ -33,7 +33,7 @@ const BlogFeatured = () => {
               >
                 {markdownRemark.frontmatter.author}
               </Link>
-            </S.Author>
+            </S.Author> */}
 
             <Link to={markdownRemark.fields.slug}>
               <S.Title>{markdownRemark.frontmatter.title}</S.Title>
@@ -43,16 +43,17 @@ const BlogFeatured = () => {
               {formatDate(markdownRemark.frontmatter.date)}
             </S.DateText>
 
-            <S.Category>
+            {/* <S.Category>
               {markdownRemark.frontmatter.category.map((cat, index, arr) => (
                 <ConcatWords arrCount={arr.length} index={index} key={cat}>
                   <Link to={`/blog/category/${kebabCase(cat)}`}>{cat}</Link>
                 </ConcatWords>
               ))}
-            </S.Category>
+            </S.Category> */}
           </S.FeaturedInfos>
         </Row>
       </Cell>
+      
     </Row>
   )
 }

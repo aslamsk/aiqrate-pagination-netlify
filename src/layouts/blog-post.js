@@ -22,25 +22,25 @@ const BlogPost = ({ data, pageContext }) => {
       <Container>
         <img src={imageSource} alt={markdownRemark.frontmatter.title} />
 
-        <S.Author>
+        {/* <S.Author>
           By{" "}
           <Link
             to={`/blog/author/${kebabCase(markdownRemark.frontmatter.author)}`}
           >
             {markdownRemark.frontmatter.author}
           </Link>
-        </S.Author>
+        </S.Author> */}
 
         <S.Title>{markdownRemark.frontmatter.title}</S.Title>
         <S.DateText>{formatDate(markdownRemark.frontmatter.date)}</S.DateText>
 
-        <S.Category>
+        {/* <S.Category>
           {markdownRemark.frontmatter.category.map((cat, index, arr) => (
             <ConcatWords arrCount={arr.length} index={index} key={cat}>
               <Link to={`/blog/category/${kebabCase(cat)}`}>{cat}</Link>
             </ConcatWords>
           ))}
-        </S.Category>
+        </S.Category> */}
 
         <S.BlogContent
           dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
