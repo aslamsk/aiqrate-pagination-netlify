@@ -20,180 +20,25 @@
 #       - {label: "Body", name: "body", widget: "markdown"}
 
 
-# backend:
-#   name: github
-#   repo: aslamsk/aiqrate-pagination-netlify
-
-# media_folder: content/blog
-# public_folder: new
-
-# collections:
-#   - name: blog
-#     label: Blog
-#     folder:  content/blog
-#     create: true
-#     fields:
-#       - { name: "featuredImage", label: "Featured Image", widget: "image" }
-#       - { name: path, label: Path }
-#       - { name: date, label: Date, widget: date }
-#       - { name: title, label: Title }
-#       - { name: description, label: Description }
-#       - { name: body, label: Body, widget: markdown }
-
-
-
-# backend:
-#   name: git-gateway
-#   branch: master
-#   publish_mode: editorial_workflow
-#   media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
-# public_folder: "/images/uploads
-
-
 backend:
-    name: github
-    repo: aslamsk/aiqrate-pagination-netlify
-    branch: master
-    site_domain: https://aiqrate-pagination-neylify.netlify.com/
+  name: github
+  repo: aslamsk/aiqrate-pagination-netlify
 
-publish_mode: editorial_workflow
-media_folder: 'content/blog'
-public_folder: 'contet/blog'
-show_preview_links: true
+media_folder: content/blog
+public_folder: content/blog
 
 collections:
-    #Posts (English)
-    - name: 'posts-en' # Used in routes, e.g., /admin/collections/blog
-      label: 'Posts (English)' # Used in the UI
-      folder: 'blog' # The path to the folder where the documents are stored
-      create: true # Allow users to create new documents in this collection
-      slug: '{{year}}-{{month}}-{{day}}-{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
-      extension: 'en.md'
-      format: frontmatter
-      fields: # The fields for each document, usually in front matter
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Description', name: 'description', widget: 'string' }
-          - {
-                label: 'Date',
-                name: 'date',
-                widget: 'datetime',
-                format: 'YYYY-MM-DD hh:mm:ss',
-            }
-          - { label: 'image', name: 'image', widget: 'image' }
-          - {
-                label: 'Category',
-                name: 'category',
-                widget: 'select',
-                options:
-                    [
-                        'Markdown',
-                        'Javascript',
-                        'Images',
-                        'Gatsby',
-                        'Imagens',
-                        'Others',
-                        'Outros',
-                    ],
-            }
-          - {
-                label: 'Background',
-                name: 'background',
-                widget: 'select',
-                options:
-                    [
-                        { label: 'Gray', value: '#353b48' },
-                        { label: 'Yellow', value: '#e58e26' },
-                        { label: 'Green', value: '#079992' },
-                        { label: 'Purple', value: '#7d4cdb' },
-                        { label: 'Red', value: '#e74c3c' },
-                        { label: 'Silver', value: '#bdc3c7' },
-                    ],
-            }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: blog
+    label: Blog
+    folder:  src/components/blog-list
+    create: true
+    fields:
+      - { name: "featured", label: "featured", widget: "image" }
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
+      - { name: description, label: Description }
+      - { name: body, label: Body, widget: markdown }
 
-    #Posts (Portuguese)
-    - name: 'posts-pt' # Used in routes, e.g., /admin/collections/blog
-      label: 'Posts (Portuguese)' # Used in the UI
-      folder: 'blog' # The path to the folder where the documents are stored
-      create: true # Allow users to create new documents in this collection
-      slug: '{{year}}-{{month}}-{{day}}-{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
-      extension: 'pt.md'
-      format: frontmatter
-      fields: # The fields for each document, usually in front matter
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Description', name: 'description', widget: 'string' }
-          - {
-                label: 'Date',
-                name: 'date',
-                widget: 'datetime',
-                format: 'YYYY-MM-DD hh:mm:ss',
-            }
-          - { label: 'image', name: 'image', widget: 'image' }
-          - {
-                label: 'Category',
-                name: 'category',
-                widget: 'select',
-                options:
-                    [
-                        'Markdown',
-                        'Javascript',
-                        'Images',
-                        'Gatsby',
-                        'Imagens',
-                        'Others',
-                        'Outros',
-                    ],
-            }
-          - {
-                label: 'Background',
-                name: 'background',
-                widget: 'select',
-                options:
-                    [
-                        { label: 'Gray', value: '#353b48' },
-                        { label: 'Yellow', value: '#e58e26' },
-                        { label: 'Green', value: '#079992' },
-                        { label: 'Purple', value: '#7d4cdb' },
-                        { label: 'Red', value: '#e74c3c' },
-                        { label: 'Silver', value: '#bdc3c7' },
-                    ],
-            }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
 
-    #Pages (English)
-    - name: 'pages-en' # Used in routes, e.g., /admin/collections/blog
-      label: 'Pages (English)' # Used in the UI
-      folder: 'pages' # The path to the folder where the documents are stored
-      create: true # Allow users to create new documents in this collection
-      slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
-      extension: 'en.md'
-      format: frontmatter
-      fields: # The fields for each document, usually in front matter
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - {
-                label: 'Date',
-                name: 'date',
-                widget: 'datetime',
-                format: 'YYYY-MM-DD hh:mm:ss',
-            }
-          - { label: 'isPage', name: 'page', widget: 'hidden', default: true }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
 
-    #Pages (Portuguese)
-    - name: 'pages-pt' # Used in routes, e.g., /admin/collections/blog
-      label: 'Pages (Portuguese)' # Used in the UI
-      folder: 'pages' # The path to the folder where the documents are stored
-      create: true # Allow users to create new documents in this collection
-      slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
-      extension: 'pt.md'
-      format: frontmatter
-      fields: # The fields for each document, usually in front matter
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - {
-                label: 'Date',
-                name: 'date',
-                widget: 'datetime',
-                format: 'YYYY-MM-DD hh:mm:ss',
-            }
-          - { label: 'isPage', name: 'page', widget: 'hidden', default: true }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
