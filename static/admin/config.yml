@@ -28,7 +28,7 @@ media_folder: content/blog
 public_folder: content/blog
 
 collections:
-  - name: blog
+  - name: posts
     label: Blog
     folder:  content/blog
     create: true
