@@ -30,7 +30,7 @@ public_folder: content/blog
 collections:
   - name: blog
     label: Blog
-    folder:  src/components/blog-list
+    folder:  content/blog
     create: true
     fields:
       - { name: "featured", label: "featured", widget: "image" }
