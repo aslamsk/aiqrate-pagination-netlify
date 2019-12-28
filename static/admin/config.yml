@@ -57,8 +57,8 @@ backend:
     site_domain: https://aiqrate-pagination-neylify.netlify.com/
 
 publish_mode: editorial_workflow
-media_folder: 'static/assets/img'
-public_folder: 'assets/img'
+media_folder: 'content/blog'
+public_folder: 'contet/blog'
 show_preview_links: true
 
 collections:
