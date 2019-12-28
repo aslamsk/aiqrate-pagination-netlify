@@ -30,10 +30,10 @@ public_folder: content/blog
 collections:
   - name: blog
     label: Blog
-    folder:  content/blog/fernando-de-noronha/
+    folder:  content/blog
     create: true
     fields:
-      - { name: "featured", label: "featured", widget: "image" }
+      - { name: "featuredImage", label: "Featured Image", widget: "image" }
       - { name: path, label: Path }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
