@@ -67,23 +67,23 @@ exports.createPages = ({ graphql, actions }) => {
     })
 
     // Creating blog posts
-    posts.forEach((post, index, arr) => {
-      post.node.frontmatter.category.forEach(cat => categories.push(cat))
-      authors.push(post.node.frontmatter.author)
+    // posts.forEach((post, index, arr) => {
+    //   post.node.frontmatter.category.forEach(cat => categories.push(cat))
+    //   authors.push(post.node.frontmatter.author)
 
-      const prev = arr[index - 1]
-      const next = arr[index + 1]
+    //   const prev = arr[index - 1]
+    //   const next = arr[index + 1]
 
-      createPage({
-        path: post.node.fields.slug,
-        component: blogLayout,
-        context: {
-          slug: post.node.fields.slug,
-          prev: prev,
-          next: next,
-        },
-      })
-    })
+    //   createPage({
+    //     path: post.node.fields.slug,
+    //     component: blogLayout,
+    //     context: {
+    //       slug: post.node.fields.slug,
+    //       prev: prev,
+    //       next: next,
+    //     },
+    //   })
+    // })
 
     // Creating category page
     const countCategories = categories.reduce((prev, curr) => {
